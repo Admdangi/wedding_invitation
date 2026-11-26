@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body class="locked">
+<canvas id="fx"></canvas><canvas id="fw"></canvas>
+
+<!-- OPENING ENVELOPE -->
+<div id="intro">
+  <div class="env-wrap"><div class="env" id="env">
+    <div class="card"><p>You Are Cordially Invited</p><h2 class="names"></h2><small>to the wedding of</small></div>
+    <div class="flap"></div><div class="pocket"></div>
+  </div>
+  <p class="inv-text">You Are Cordially Invited</p>
+  <h1 class="names big"></h1>
+  <button class="btn" id="openBtn">Open Invitation</button></div>
+</div>
+
+<nav id="nav"><a href="#home" class="logo"></a><button id="burger" aria-label="Menu">&#9776;</button>
+<div id="links"><a href="#date">Date</a><a href="#events">Celebrations</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a></div></nav>
+
+<header id="home" class="hero">
+  <div class="rays"></div>
+  <div class="portraits">
+    <figure class="frame"><img id="brideImg" alt="Bride"><figcaption id="brideCap"></figcaption></figure>
+    <div class="mid"><div class="mandala"></div><h1 class="names title" id="heroNames"></h1><p id="heroDate"></p></div>
+    <figure class="frame"><img id="groomImg" alt="Groom"><figcaption id="groomCap"></figcaption></figure>
+  </div>
+  <p class="quote">“Two Souls, One Heart, One Beautiful Journey Forever.”</p>
+</header>
+
+<section id="family" class="family">
+  <div class="orn">❁ ❀ ❁</div>
+  <p class="bless">With the blessings of our beloved elders and the love and support of our families, we cordially invite you to join us in celebrating the beautiful union of two souls.</p>
+  <div class="parents" id="parents"></div>
+</section>
+
+<section id="date" class="reveal-sec">
+  <div class="gold-box" id="dateBox">
+    <div id="beforeDate"><p class="sub">A Special Day Is Approaching...</p>
+      <div class="pulse-ring"></div>
+      <button class="btn" id="discoverBtn">Discover Our Wedding Date</button></div>
+    <div id="afterDate" hidden><div class="mandala big-m"></div>
+      <p class="dayname" id="dDay"></p><div class="bigdate"><span id="dNum"></span></div>
+      <p class="monyear" id="dMonY"></p><p class="forever">The Beginning of Forever</p></div>
+  </div>
+  <div class="count" id="count"></div>
+  <p id="today" hidden class="today">Today Is The Day! Let The Celebration Begin!</p>
+</section>
+
+<section id="events"><h2 class="sec-title">Wedding Celebrations<span>Join Us For Every Moment</span></h2><div class="events" id="eventList"></div></section>
+<section id="story"><h2 class="sec-title">Our Love Story</h2><div class="timeline" id="timeline"></div></section>
+<section id="gallery"><h2 class="sec-title">Moments Together</h2><div class="masonry" id="grid"></div></section>
+
+<section id="venue"><h2 class="sec-title">Find Us &amp; Celebrate With Us</h2>
+  <div class="venue"><div class="vinfo"><h3 id="vName"></h3><p id="vAddr"></p><div id="vList"></div>
+  <a class="btn" id="dirBtn" target="_blank" rel="noopener">Get Directions</a></div>
+  <iframe id="map" loading="lazy" title="Venue map"></iframe></div></section>
+
+<section id="rsvp"><h2 class="sec-title">RSVP<span>Kindly respond by the date below</span></h2>
+  <form id="form" novalidate>
+    <label>Guest Name<input name="name" required><em></em></label>
+    <label>Mobile Number<input name="phone" inputmode="tel" required><em></em></label>
+    <label>Number of Guests<input name="guests" type="number" min="1" max="10" value="1"><em></em></label>
+    <label>Function You Will Attend<select name="fn" id="fnSel"></select></label>
+    <fieldset><legend>Will You Join Us?</legend><label class="r"><input type="radio" name="join" value="Yes" checked> Joyfully accept</label><label class="r"><input type="radio" name="join" value="No"> Regretfully decline</label></fieldset>
+    <label class="full">Special Message<textarea name="msg" rows="3"></textarea></label>
+    <button class="btn full" type="submit">Send RSVP</button>
+  </form>
+  <div id="thanks" hidden><div class="check">✓</div><h3>Thank You!</h3><p>Your response has been received. We can't wait to celebrate with you.</p></div>
+</section>
+
+<footer><div class="orn">❁ ❀ ❁</div><h2 class="names" id="footNames"></h2><p id="footDate"></p>
+<div class="actions"><button class="btn sm" id="bless">Send Blessings</button><button class="btn sm" id="share">Share Invitation</button><button class="btn sm" id="print">Download Invitation</button></div>
+<small>With love &amp; blessings</small></footer>
+
+<div id="lb" hidden><button id="lbX">×</button><button id="lbP">‹</button><img id="lbImg" alt=""><button id="lbN">›</button><p id="lbCap"></p></div>
+<div id="toast"></div>
+<button id="top" aria-label="Back to top">↑</button>
+<div id="player"><button id="pp" aria-label="Play or pause">▶</button><div class="viz"><i></i><i></i><i></i><i></i></div><button id="mute" aria-label="Mute">🔊</button></div>
+<audio id="audio" loop preload="none"></audio>
+<script src="script.js"></script>
+</body></html>
